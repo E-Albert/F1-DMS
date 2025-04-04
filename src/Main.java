@@ -1,3 +1,6 @@
+/**
+ * Entry to project. Calls method that controls CLI logic
+ */
 public class Main {
     public static void main(String[] args) {
 

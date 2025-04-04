@@ -11,15 +11,27 @@ import java.util.Objects;
 //used to read user input
 import java.util.Scanner;
 
+/**
+ * Has CLI logic
+ */
 public class DriverManager {
     //stores all driver objects in a list
     private List<Driver> drivers;
 
     //constructor to initialize list
+
+    /**
+     * creates driver list
+     */
     public DriverManager() {
         drivers = new ArrayList<>();
     }
 
+    /**
+     * adds a driver to list
+     * @param driver
+     * @return
+     */
     // Method to add driver to list, now returns boolean
     public boolean addDriver(Driver driver) {
         boolean isAdded = drivers.add(driver);
@@ -29,6 +41,11 @@ public class DriverManager {
         return isAdded;
     }
 
+    /**
+     * removes driver from list
+     * @param driverName
+     * @return
+     */
     // Method to remove a driver by name from list, now returns boolean
     public boolean removeDriver(String driverName) {
         for (Driver driver : drivers) {
@@ -42,6 +59,10 @@ public class DriverManager {
         return false;
     }
 
+    /**
+     * displays all drivers in list
+     * @return
+     */
     // Method to display all drivers from list, returns nothing, as this is for display purposes
     public boolean displayAllDrivers() {
         if (drivers.isEmpty()) {
@@ -55,6 +76,11 @@ public class DriverManager {
         }
     }
 
+    /**
+     * loads driver information from file
+     * @param filename
+     * @return
+     */
     // Method to load information from a file and add drivers to F1 DMS, now returns boolean
     public boolean loadDriversFromFile(String filename) {
         try {
@@ -90,27 +116,12 @@ public class DriverManager {
         return false;
     }
 
-    // Method to update driver information, now returns boolean
-//    public boolean updateDriver(String driverName, Scanner scanner) {
-//        for (Driver driver : drivers) {
-//            if (Objects.equals(driver.getDriverName(), driverName)) {
-//                System.out.println("Updating driver: " + driverName);
-//                driver.setDriverNumber(getIntInput(scanner, "Enter new Driver Number: "));
-//                driver.setCurrentTeam(getStringInput(scanner, "Enter new Current Team: "));
-//                driver.setAge(getIntInput(scanner, "Enter new Age: "));
-//                driver.setNationality(getStringInput(scanner, "Enter new Nationality: "));
-//                driver.setNumberOfRaces(getIntInput(scanner, "Enter new Number of Races: "));
-//                driver.setNumberOfWins(getIntInput(scanner, "Enter new Number of Wins: "));
-//                driver.setIsActiveDriver(getBooleanInput(scanner, "Is the driver Active? (true or false): "));
-//                driver.setHeight(getFloatInput(scanner, "Enter new Height(m): "));
-//                driver.setCareerPoints(getDoubleInput(scanner, "Enter new Career Points: "));
-//                System.out.println("Driver information updated successfully.");
-//                return true;
-//            }
-//        }
-//        System.out.println("Driver not found.");
-//        return false;
-//    }
+    /**
+     * updates driver information
+     * @param driverName
+     * @param updatedDriver
+     * @return
+     */
     public boolean updateDriver(String driverName, Driver updatedDriver) {
         for (Driver driver : drivers) {
             if (Objects.equals(driver.getDriverName(), driverName)) {
@@ -133,7 +144,11 @@ public class DriverManager {
         return false;
     }
 
-
+    /**
+     * calculates driver win ratio
+     * @param driverName
+     * @return
+     */
     // Custom method that calculates win-to-race ratio for given driver, now returns boolean
     public boolean calculateWinRatio(String driverName) {
         for (Driver driver : drivers) {
@@ -152,7 +167,9 @@ public class DriverManager {
         return false;
     }
 
-
+    /**
+     * CLI logic
+     */
     //method for user interaction with DMS
     public void menu() {
         Scanner scanner = new Scanner(System.in);
@@ -257,6 +274,13 @@ public class DriverManager {
     }
 
     // Validation Methods
+
+    /**
+     * checks if user input is a string
+     * @param scanner
+     * @param message
+     * @return
+     */
     //this method ensures that the input only contains letters. Uses a regex to help with validation
     private String getStringInput(Scanner scanner, String message) {
         while (true) {
@@ -269,6 +293,12 @@ public class DriverManager {
         }
     }
 
+    /**
+     * checks if user input is an integer
+     * @param scanner
+     * @param message
+     * @return
+     */
     //this method ensures that the input only contains integers
     private int getIntInput(Scanner scanner, String message) {
         while (true) {
@@ -284,6 +314,12 @@ public class DriverManager {
         }
     }
 
+    /**
+     * checks if user input is a boolean
+     * @param scanner
+     * @param message
+     * @return
+     */
     //this method ensures that the input only accepts the words true or false
     private boolean getBooleanInput(Scanner scanner, String message) {
         while (true) {
@@ -296,6 +332,12 @@ public class DriverManager {
         }
     }
 
+    /**
+     * checks if user input is a float
+     * @param scanner
+     * @param message
+     * @return
+     */
     //this method ensures that the input is a float
     private float getFloatInput(Scanner scanner, String message) {
         while (true) {
@@ -311,6 +353,12 @@ public class DriverManager {
         }
     }
 
+    /**
+     * checks if user input is a double
+     * @param scanner
+     * @param message
+     * @return
+     */
     //this method ensures that the input is a double
     private double getDoubleInput(Scanner scanner, String message) {
         while (true) {
