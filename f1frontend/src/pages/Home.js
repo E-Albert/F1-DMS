@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -19,18 +20,18 @@ export default function Home() {
 
           {/* Middle Buttons Column */}
           <div className="col-md-4 d-flex flex-column align-items-center">
-            <button className="btn btn-outline-danger my-2 w-75">
+            <Link className="btn btn-outline-danger my-2 w-75" to="/addDrivers">
               Add Drivers
-            </button>
-            <button className="btn btn-outline-danger my-2 w-75">
+            </Link>
+            <Link className="btn btn-outline-danger my-2 w-75" to="/viewDrivers">
               View All Drivers
-            </button>
-            <button className="btn btn-outline-danger my-2 w-75">
+            </Link>
+            <Link className="btn btn-outline-danger my-2 w-75" to="/editDrivers">
               Edit Drivers
-            </button>
-            <button className="btn btn-outline-danger my-2 w-75">
+            </Link>
+            <Link className="btn btn-outline-danger my-2 w-75" to="deleteDrivers">
               Delete Drivers
-            </button>
+            </Link>
           </div>
 
           {/* Right Image Column */}
