@@ -60,7 +60,9 @@ public class Driver {
     }
 
     //getter methods
-
+    public Long getId() {
+        return id;
+    }
     /**
      * retrieves driver name
      * @return
@@ -142,7 +144,9 @@ public class Driver {
     }
 
     //setters
-
+    public void setId(Long id) {
+        this.id = id;
+    }
     /**
      * sets driver name
      * @param driverName
