@@ -1,11 +1,19 @@
-
+package com.f1drivers.f1_data_system.model;
 /*this class holds all the attributes for each driver, methods to retrieve and set
     driver attributes and a constructor to initialize driver information*/
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 /**
  * Driver attributes and methods
  */
+@Entity
 public class Driver {
+
+    @Id
+    @GeneratedValue
     //driver attributes
     private String driverName;
     private int driverNumber;
@@ -44,6 +52,10 @@ public class Driver {
         this.isActiveDriver = isActiveDriver;
         this.height = height;
         this.careerPoints = careerPoints;
+    }
+
+    public Driver() {
+
     }
 
     //getter methods
