@@ -19,7 +19,7 @@ export default function ViewDriver() {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col"></th>
             <th scope="col">Name</th>
             <th scope="col">Number</th>
             <th scope="col">Team</th>

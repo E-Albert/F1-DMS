@@ -50,7 +50,7 @@ export default function AddDriver() {
       careerPoints: Number(driver.careerPoints),
       isActiveDriver: driver.isActiveDriver === "true",
     };
-      await axios.post("http://localhost:8080/driver", driver);
+      await axios.post("http://localhost:8080/drivers", driver);
       navigate("/")
 
     console.log("Submitted Driver:", processedDriver);

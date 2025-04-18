@@ -7,6 +7,7 @@ import AddDriver from './drivers/AddDriver';
 import ViewDriver from './drivers/ViewDriver';
 import EditDriver from './drivers/EditDriver';
 import DeleteDriver from './drivers/DeleteDriver';
+import EditDriverForm from './drivers/EditDriverForm';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/viewDrivers" element={<ViewDriver />} />
           <Route exact path="/editDrivers" element={<EditDriver />} />
           <Route exact path="/deleteDrivers" element={<DeleteDriver />} />
+          <Route exact path="/editDriverForm/:id" element={<EditDriverForm />} />
         </Routes>
       </Router>
     </div>
