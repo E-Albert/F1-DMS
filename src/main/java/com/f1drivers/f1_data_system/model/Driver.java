@@ -15,6 +15,7 @@ public class Driver {
     @Id
     @GeneratedValue
     //driver attributes
+    private Long id;
     private String driverName;
     private int driverNumber;
     private String currentTeam;
