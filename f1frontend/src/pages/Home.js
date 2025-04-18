@@ -1,6 +1,8 @@
+// Import React and Link for building the home page and routing to other pages
 import React from "react";
 import { Link } from "react-router-dom";
 
+// This is the main Home page component
 export default function Home() {
   return (
     <div
@@ -18,18 +20,34 @@ export default function Home() {
             />
           </div>
 
-          {/* Middle Buttons Column */}
+          {/* Middle Column with Navigation Buttons */}
           <div className="col-md-4 d-flex flex-column align-items-center">
+            {/* Button to go to Add Drivers page */}
             <Link className="btn btn-outline-danger my-2 w-75" to="/addDrivers">
               Add Drivers
             </Link>
-            <Link className="btn btn-outline-danger my-2 w-75" to="/viewDrivers">
+
+            {/* Button to go to View All Drivers page */}
+            <Link
+              className="btn btn-outline-danger my-2 w-75"
+              to="/viewDrivers"
+            >
               View All Drivers
             </Link>
-            <Link className="btn btn-outline-danger my-2 w-75" to="/editDrivers">
+
+            {/* Button to go to Edit Drivers page */}
+            <Link
+              className="btn btn-outline-danger my-2 w-75"
+              to="/editDrivers"
+            >
               Edit Drivers
             </Link>
-            <Link className="btn btn-outline-danger my-2 w-75" to="deleteDrivers">
+
+            {/* Button to go to Delete Drivers page */}
+            <Link
+              className="btn btn-outline-danger my-2 w-75"
+              to="/deleteDrivers"
+            >
               Delete Drivers
             </Link>
           </div>
